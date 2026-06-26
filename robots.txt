@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yltoolkit-droid.github.io/yl-toolkit/sitemap.xml

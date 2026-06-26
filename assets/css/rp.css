@@ -1,0 +1,24 @@
+
+label.main-label{display:block;font-weight:950;margin:0 0 8px}.input-row{display:grid;grid-template-columns:1fr 78px;gap:10px}input,select{width:100%;border:1px solid #d8c5b3;background:white;color:var(--ink);border-radius:15px;padding:15px 16px;font-size:17px;font-weight:800}.quick,.opts,.checks{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.quick{margin-top:10px}.opts{margin-top:12px;gap:14px}.opts label{display:flex;align-items:center;gap:6px;font-weight:800}.opts input,.checkbtn input{width:auto;padding:0}.section-title{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.notice{background:white;border:1px dashed #d8c4b1;color:#5a473a;padding:14px;border-radius:16px}.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}.stat{background:white;border:1px solid var(--line);border-radius:16px;padding:14px}.stat small{display:block;color:var(--muted);font-weight:800;margin-bottom:6px}.stat b{font-size:21px}.combo{overflow:hidden;background:white;border:1px solid var(--line);border-radius:18px;margin:12px 0}.combo-head{display:flex;justify-content:space-between;gap:10px;padding:13px 14px;background:#f3f7ef;border-bottom:1px solid var(--line);font-weight:950}table{width:100%;border-collapse:collapse;font-size:15px}th,td{border-bottom:1px solid #edf0e8;padding:11px 10px;text-align:left;vertical-align:top}th{background:#fbfcf8;color:#344734;font-size:14px}.right{text-align:right;white-space:nowrap}.muted{color:var(--muted)}.product-tools{display:grid;grid-template-columns:1fr 170px;gap:8px;margin-bottom:10px}.checkbtn{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:800}@media(max-width:620px){.input-row{grid-template-columns:1fr 72px}.summary-grid{grid-template-columns:1fr 1fr}.product-tools{grid-template-columns:1fr}table{font-size:14px}th,td{padding:9px 7px}.hide-mobile{display:none}.combo-head{flex-direction:column}}
+
+
+.combo-tag{
+  display:inline-flex;
+  align-items:center;
+  margin-left:6px;
+  padding:3px 8px;
+  border-radius:999px;
+  background:#eef5ee;
+  color:#31533a;
+  font-size:12px;
+  font-style:normal;
+  font-weight:900;
+  vertical-align:middle;
+}
+@media(max-width:620px){
+  .combo-tag{
+    margin-left:0;
+    margin-top:6px;
+    width:max-content;
+  }
+}
