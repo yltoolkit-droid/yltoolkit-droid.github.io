@@ -24,9 +24,9 @@
   const selected=new Set();
 
   function grade(p){
-    if(p.rank<=highCut) return {key:'high',label:'포인트 효율 높음'};
-    if(p.rank>=lowStart) return {key:'low',label:'포인트 효율 낮음'};
-    return {key:'mid',label:'포인트 효율 보통'};
+    if(p.rank<=highCut) return {key:'high',label:'포인트 구매 우선 추천'};
+    if(p.rank>=lowStart) return {key:'low',label:'현금 구매도 비교'};
+    return {key:'mid',label:'필요도에 따라 선택'};
   }
   const won=n=>Math.round(n).toLocaleString('ko-KR')+'원';
   const pv=n=>Number(n).toLocaleString('ko-KR',{maximumFractionDigits:2})+' PV';
