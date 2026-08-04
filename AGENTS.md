@@ -16,12 +16,28 @@
 
 ## Repository Rule
 
-- YL Toolkit 프로젝트의 기준 저장소는 `C:\Users\junghaekr\Documents\GitHub\yltoolkit-droid.github.io`이다.
+- YL Toolkit 프로젝트의 기준 저장소는 `C:\Users\junghaekr\Documents\YL Toolkit\yltoolkit-droid.github.io`이다.
 - 앞으로 모든 수정은 위 로컬 Git 저장소에서 직접 진행한다.
 - `repo-download` 폴더는 사용하지 않는다.
 - ZIP 다운로드 방식으로 작업하지 않는다.
 - 수정 완료 후 GitHub Desktop에서 바로 Commit 가능한 상태를 유지한다.
 - Git Push는 사용자 승인 후에만 진행한다.
+
+## Codex 작업 규칙
+
+- 작업 전 실제 Git 저장소 루트와 현재 브랜치를 확인한다.
+- 사용자가 지정한 작업 루트 밖의 파일은 수정하지 않는다.
+- Fast Mode에서는 요청된 범위만 최소 수정한다.
+- 관련 없는 리팩터링, 포맷 전체 변경, 파일 이동을 하지 않는다.
+- HTML에서 로컬 CSS·JavaScript 파일을 수정한 경우 버전 쿼리도 함께 갱신한다.
+- 페이지에 표시되는 버전과 cache busting 버전을 동일하게 유지한다.
+- 버전 변경은 사용자가 요청하거나 실제 배포 변경이 있을 때만 한다.
+- 수정 후 문법 오류와 기존 주요 기능을 확인한다.
+- 테스트하지 못한 항목은 테스트한 것처럼 보고하지 않는다.
+- 커밋 전 `git diff`와 `git status`를 확인한다.
+- 사용자가 명시적으로 요청한 경우에만 commit과 push를 실행한다.
+- `apply_patch`가 환경 오류로 실패하면 같은 명령을 반복하지 말고, 파일을 안전하게 수정할 수 있는 다른 정상적인 방법을 사용한다.
+- 파일 수정이 실제로 완료되지 않았다면 완료됐다고 보고하지 않는다.
 
 ## 애드센스 및 SEO 보호
 
