@@ -23,6 +23,12 @@
 - 수정 완료 후 GitHub Desktop에서 바로 Commit 가능한 상태를 유지한다.
 - Git Push는 사용자 승인 후에만 진행한다.
 
+## Cache Busting Rule
+
+- JavaScript 또는 CSS를 수정한 경우에는 해당 `script` 또는 `link` 참조의 버전 쿼리스트링을 함께 갱신한다.
+- 예: `rp.js?v=4.3.3`, `rp.css?v=4.3.3`
+- 사용자가 Ctrl+F5를 하지 않아도 최신 파일을 자동으로 받도록 한다.
+
 ## 애드센스 및 SEO 보호
 
 다음 애드센스 관련 파일과 설정은 변경하지 않는다.
