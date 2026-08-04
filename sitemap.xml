@@ -123,4 +123,16 @@
   <url><loc>https://yltoolkit-droid.github.io/rp/guide/</loc></url>
   <url><loc>https://yltoolkit-droid.github.io/cost/guide/</loc></url>
   <url><loc>https://yltoolkit-droid.github.io/dilution/guide/</loc></url>
+  <url>
+    <loc>https://yltoolkit-droid.github.io/rp-value/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://yltoolkit-droid.github.io/rp-value/guide/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
