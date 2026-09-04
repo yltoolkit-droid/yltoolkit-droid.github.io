@@ -59,7 +59,7 @@
       const g=grade(p); const checked=selected.has(p.id)?' checked':'';
       return `<article class="value-card">
         <div class="value-card-head"><div><h2>${escapeHtml(p.name)}</h2><span class="value-category">${escapeHtml(p.category||'기타')}</span></div><span class="value-rank">전체 ${p.rank}위 / ${total}개</span></div>
-        <div class="value-metrics"><div class="value-metric"><span>회원가</span><strong>${won(p.price)}</strong></div><div class="value-metric"><span>제품 RP</span><strong>${pv(p.rp)}</strong></div><div class="value-metric"><span>1PV당 제품가치</span><strong>${won(p.value)}</strong></div></div>
+        <div class="value-metrics"><div class="value-metric"><span>회원가</span><strong>${won(p.price)}</strong></div><div class="value-metric"><span>제품 PV</span><strong>${pv(p.rp)}</strong></div><div class="value-metric"><span>1PV당 제품가치</span><strong>${won(p.value)}</strong></div></div>
         <div class="value-card-foot"><span class="efficiency-badge efficiency-${g.key}">${g.label}</span><label class="compare-check"><input type="checkbox" data-id="${p.id}"${checked}> 비교에 담기</label></div>
       </article>`
     }).join('');

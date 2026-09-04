@@ -7,9 +7,9 @@
   if(!product){if(error)error.textContent="제품 데이터를 확인할 수 없습니다.";return;}
   const set=(selector,value)=>{const el=root.querySelector(selector);if(el)el.textContent=value;};
   set("[data-product-price]",product.price.toLocaleString("ko-KR")+"원");
-  set("[data-product-rp]",product.rp.toLocaleString("ko-KR",{minimumFractionDigits:0,maximumFractionDigits:2})+" RP");
+  set("[data-product-rp]",product.rp.toLocaleString("ko-KR",{minimumFractionDigits:0,maximumFractionDigits:2})+" PV");
   const volumeMatch=product.name.match(/(\d+(?:\.\d+)?)\s*ml/i);
   if(volumeMatch)set("[data-product-volume]",volumeMatch[1]+"ml");
-  set("[data-product-updated]","2026-08-04");
+  set("[data-product-updated]","2026-09-04");
   if(error)error.textContent="YL Toolkit 제품 데이터를 사용합니다. 실제 주문 화면을 우선하세요.";
 })();

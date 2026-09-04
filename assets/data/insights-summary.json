@@ -1,22 +1,22 @@
 {
   "generated": "2026-09-04",
-  "dataDate": "2026-08-04",
-  "productCount": 99,
-  "validCount": 99,
+  "dataDate": "2026-09-04",
+  "productCount": 100,
+  "validCount": 100,
   "excluded": [],
   "stats": {
     "min": 882.6530612244898,
-    "q1": 1547.0175438596493,
-    "median": 1575,
-    "q3": 1615.76002944424,
+    "q1": 1549.919028340081,
+    "median": 1577.3089171974523,
+    "q3": 1617.5054453742978,
     "max": 1826.0869565217392
   },
   "categories": [
     {
       "category": "기타",
-      "count": 2,
-      "median": 1486.7508078775684,
-      "average": 1486.7508078775684
+      "count": 1,
+      "median": 1581.8181818181818,
+      "average": 1581.8181818181818
     },
     {
       "category": "롤온",
@@ -26,9 +26,9 @@
     },
     {
       "category": "블렌드오일",
-      "count": 24,
+      "count": 26,
       "median": 1584.9056603773586,
-      "average": 1588.625168373824
+      "average": 1584.3897012007303
     },
     {
       "category": "생활용품",
@@ -40,48 +40,53 @@
       "category": "싱글오일",
       "count": 65,
       "median": 1575,
-      "average": 1566.93413627975
+      "average": 1570.9825323281464
     }
   ],
   "top": [
     {
-      "id": 37,
+      "id": 38,
       "name": "시더우드 에센셜 오일 15ml",
       "category": "싱글오일",
       "price": 21000,
       "rp": 11.5,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2023/350969.png",
       "value": 1826.0869565217392
     },
     {
-      "id": 99,
+      "id": 100,
       "name": "세이지 에센셜 오일 5ml",
       "category": "싱글오일",
       "price": 23100,
       "rp": 12.75,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2025/07f34054-5347-4432-90da-c8d55c0a4c82_Sage%205ml.png",
       "value": 1811.764705882353
     },
     {
-      "id": 62,
+      "id": 63,
       "name": "블랙페퍼 에센셜 오일 5ml",
       "category": "싱글오일",
       "price": 34700,
       "rp": 19.25,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2023/361169.png",
       "value": 1802.5974025974026
     },
     {
-      "id": 24,
+      "id": 25,
       "name": "주바플렉스 에센셜 오일 블렌드 5ml",
       "category": "블렌드오일",
       "price": 51000,
       "rp": 28.75,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2025/b2c04cf8-17a6-4132-ad17-e40e021abb3f_JUVAFLEX_5ml.png",
       "value": 1773.9130434782608
     },
     {
-      "id": 10,
+      "id": 11,
       "name": "히노끼 에센셜 오일 5ml",
       "category": "싱글오일",
       "price": 45200,
       "rp": 25.5,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2025/4f3b0979-5a8b-4f8d-bddc-b66a8d6a3675_HINOKI.png",
       "value": 1772.549019607843
     },
     {
@@ -90,6 +95,7 @@
       "category": "싱글오일",
       "price": 13700,
       "rp": 7.75,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2026/5e110b48-175b-428c-869a-af93634063c1_tangerine_%EB%9D%BC%EB%B2%A8.png",
       "value": 1767.741935483871
     },
     {
@@ -98,14 +104,16 @@
       "category": "싱글오일",
       "price": 27300,
       "rp": 15.75,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2023/28148.png",
       "value": 1733.3333333333333
     },
     {
-      "id": 68,
+      "id": 69,
       "name": "윈터그린 에센셜 오일 15ml",
       "category": "싱글오일",
       "price": 31500,
       "rp": 18.25,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2023/365869.png",
       "value": 1726.027397260274
     },
     {
@@ -114,6 +122,7 @@
       "category": "싱글오일",
       "price": 114500,
       "rp": 66.75,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2025/1c9e3919-3da5-4f20-9ebd-4c2a3352fe12_jasmin.png",
       "value": 1715.3558052434457
     },
     {
@@ -122,89 +131,100 @@
       "category": "싱글오일",
       "price": 60900,
       "rp": 35.75,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2025/a0fb0ad1-4c79-4445-b995-7a9d2591c2f5_petitgrain_single%205.png",
       "value": 1703.4965034965035
     }
   ],
   "bottom": [
     {
-      "id": 85,
+      "id": 86,
       "name": "영리빙 띠브즈 주방세제",
       "category": "생활용품",
       "price": 17300,
       "rp": 19.6,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2026/90421597-9d95-4593-994f-c839c1ddd0fd_Thieves%20Dish%20Soap%20US_Silo.png",
       "value": 882.6530612244898
     },
     {
-      "id": 84,
+      "id": 85,
       "name": "영리빙 띠브즈 세탁세제",
       "category": "생활용품",
       "price": 41600,
       "rp": 37.84,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2026/b9df00ed-4eb1-4b3a-a031-312edd554d29_Thieves%20Laundry%20Detergent%20US_Silo.png",
       "value": 1099.3657505285412
     },
     {
-      "id": 60,
+      "id": 61,
       "name": "오레가노 에센셜 오일 15ml",
       "category": "싱글오일",
       "price": 34700,
       "rp": 28.5,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2023/360569.png",
       "value": 1217.5438596491229
     },
     {
-      "id": 83,
+      "id": 84,
       "name": "영리빙 띠브즈 가정용 세정제",
       "category": "생활용품",
       "price": 31000,
       "rp": 25.31,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2026/ce6f6682-8fb8-4bb1-8482-d2bb3a495d04_Thieves%20Cleaner.png",
       "value": 1224.8123271434217
     },
     {
-      "id": 40,
+      "id": 41,
       "name": "클래리 세이지 에센셜 오일 15ml",
       "category": "싱글오일",
       "price": 60900,
       "rp": 48.75,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2023/352169.png",
       "value": 1249.2307692307693
     },
     {
-      "id": 55,
+      "id": 56,
       "name": "티트리 에센셜 오일 15ml",
       "category": "싱글오일",
       "price": 33600,
       "rp": 26.75,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2023/358769.png",
       "value": 1256.0747663551401
     },
     {
-      "id": 51,
-      "name": "헬리크리섬 에센셜 오일 5ml",
-      "category": "싱글오일",
-      "price": 114500,
-      "rp": 87.5,
-      "value": 1308.5714285714287
-    },
-    {
-      "id": 91,
+      "id": 92,
       "name": "오레가노 에센셜 오일 5ml",
       "category": "싱글오일",
       "price": 15800,
       "rp": 12,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2025/a7860e2a-8f00-4c42-842c-aaa75162076c_oregano_5ml_%EB%9D%BC%EB%B2%A8.png",
       "value": 1316.6666666666667
     },
     {
-      "id": 44,
+      "id": 45,
       "name": "사이프레스 에센셜 오일 15ml",
       "category": "싱글오일",
       "price": 26300,
       "rp": 19.75,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2023/353069.png",
       "value": 1331.6455696202531
     },
     {
-      "id": 97,
+      "id": 98,
       "name": "코파이바 에센셜 오일 5ml",
       "category": "싱글오일",
       "price": 29400,
       "rp": 22,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2024/eca1bc5e-d9f5-4140-9e23-78f391e0d05f_Copaiba-5ml.png",
       "value": 1336.3636363636363
+    },
+    {
+      "id": 67,
+      "name": "타임 에센셜 오일 15ml",
+      "category": "싱글오일",
+      "price": 47300,
+      "rp": 34.75,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2023/365069.png",
+      "value": 1361.1510791366907
     }
   ],
   "scenarios": [
@@ -214,7 +234,7 @@
       "price": 31500,
       "items": [
         {
-          "id": 13,
+          "id": 14,
           "name": "시트로넬라 에센셜 오일 15ml",
           "rp": 20,
           "price": 31500
@@ -230,7 +250,7 @@
       "price": 31500,
       "items": [
         {
-          "id": 13,
+          "id": 14,
           "name": "시트로넬라 에센셜 오일 15ml",
           "rp": 20,
           "price": 31500
@@ -246,7 +266,7 @@
       "price": 68300,
       "items": [
         {
-          "id": 16,
+          "id": 17,
           "name": "니아울리 에센셜 오일 15ml",
           "rp": 32.25,
           "price": 54600
@@ -274,7 +294,7 @@
           "price": 16800
         },
         {
-          "id": 60,
+          "id": 61,
           "name": "오레가노 에센셜 오일 15ml",
           "rp": 28.5,
           "price": 34700
@@ -290,13 +310,13 @@
       "price": 99800,
       "items": [
         {
-          "id": 10,
+          "id": 11,
           "name": "히노끼 에센셜 오일 5ml",
           "rp": 25.5,
           "price": 45200
         },
         {
-          "id": 52,
+          "id": 53,
           "name": "주니퍼 에센셜 오일 15ml",
           "rp": 34.5,
           "price": 54600
@@ -312,19 +332,19 @@
       "price": 80900,
       "items": [
         {
-          "id": 44,
+          "id": 45,
           "name": "사이프레스 에센셜 오일 15ml",
           "rp": 19.75,
           "price": 26300
         },
         {
-          "id": 55,
+          "id": 56,
           "name": "티트리 에센셜 오일 15ml",
           "rp": 26.75,
           "price": 33600
         },
         {
-          "id": 89,
+          "id": 90,
           "name": "진저 에센셜 오일 5ml",
           "rp": 13.5,
           "price": 21000
@@ -346,7 +366,7 @@
           "price": 114500
         },
         {
-          "id": 93,
+          "id": 94,
           "name": "베르가모트 에센셜 오일 5ml",
           "rp": 13.25,
           "price": 22100
@@ -368,13 +388,13 @@
           "price": 16800
         },
         {
-          "id": 40,
+          "id": 41,
           "name": "클래리 세이지 에센셜 오일 15ml",
           "rp": 48.75,
           "price": 60900
         },
         {
-          "id": 44,
+          "id": 45,
           "name": "사이프레스 에센셜 오일 15ml",
           "rp": 19.75,
           "price": 26300
@@ -396,7 +416,7 @@
           "price": 78800
         },
         {
-          "id": 43,
+          "id": 44,
           "name": "밸러 롤-온",
           "rp": 49.75,
           "price": 77700
@@ -418,25 +438,25 @@
           "price": 16800
         },
         {
-          "id": 83,
+          "id": 84,
           "name": "영리빙 띠브즈 가정용 세정제",
           "rp": 25.31,
           "price": 31000
         },
         {
-          "id": 84,
+          "id": 85,
           "name": "영리빙 띠브즈 세탁세제",
           "rp": 37.84,
           "price": 41600
         },
         {
-          "id": 85,
+          "id": 86,
           "name": "영리빙 띠브즈 주방세제",
           "rp": 19.6,
           "price": 17300
         },
         {
-          "id": 95,
+          "id": 96,
           "name": "레몬 에센셜 오일 5ml",
           "rp": 6.25,
           "price": 10500
@@ -449,27 +469,30 @@
   ],
   "cases": [
     {
-      "id": 37,
+      "id": 38,
       "name": "시더우드 에센셜 오일 15ml",
       "category": "싱글오일",
       "price": 21000,
       "rp": 11.5,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2023/350969.png",
       "value": 1826.0869565217392
     },
     {
-      "id": 13,
+      "id": 14,
       "name": "시트로넬라 에센셜 오일 15ml",
       "category": "싱글오일",
       "price": 31500,
       "rp": 20,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2023/308569.png",
       "value": 1575
     },
     {
-      "id": 85,
+      "id": 86,
       "name": "영리빙 띠브즈 주방세제",
       "category": "생활용품",
       "price": 17300,
       "rp": 19.6,
+      "image": "https://prod-youngliving-contents.s3.ap-northeast-2.amazonaws.com/item/2026/90421597-9d95-4593-994f-c839c1ddd0fd_Thieves%20Dish%20Soap%20US_Silo.png",
       "value": 882.6530612244898
     }
   ],
