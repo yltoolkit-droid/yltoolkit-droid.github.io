@@ -25,6 +25,8 @@ body{
   color:var(--ink);
   font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
   line-height:1.62;
+  word-break:keep-all;
+  overflow-wrap:break-word;
 }
 a{color:inherit;text-decoration:none}
 .app-header{
@@ -387,12 +389,14 @@ button.secondary,.btn.secondary{
   .wrap{padding:14px 14px 48px}
   .hero{padding:30px 22px;border-radius:28px}
   .hero::before,.hero::after{opacity:.45}
-  h1{font-size:42px}
+  h1{font-size:28px;line-height:1.28;letter-spacing:-.04em}
   .hero p{font-size:16px}
   .slogan{font-size:20px!important}
   .section-head{align-items:flex-start;flex-direction:column}
   .tool-card{min-height:auto;padding:22px}
   .tool-icon{width:62px;height:62px;font-size:30px}
+  .card,.doc,.tips-card,.support-card,.calc-panel,.calc-result{padding:18px}
+  .card p,.doc p,.card li,.doc li,.update-item li{line-height:1.72}
   .support-card{flex-direction:column;align-items:flex-start}
   .btn,button.primary,.btn.secondary,button.secondary{width:100%}
 }
@@ -463,5 +467,5 @@ code{background:#eef5ef;padding:2px 6px;border-radius:7px}
 @media(max-width:460px){.analysis-grid,.metric-grid{grid-template-columns:1fr}.metric-grid>div{padding:14px}}
 
 @media(max-width:620px){
-  h1,.insights-page h1{font-size:28px!important;line-height:1.18!important;letter-spacing:-.045em}
+  h1,.insights-page h1{font-size:28px!important;line-height:1.28!important;letter-spacing:-.04em}
 }
