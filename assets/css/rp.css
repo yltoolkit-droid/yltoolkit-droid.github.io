@@ -39,3 +39,16 @@ label.main-label{display:block;font-weight:950;margin:0 0 8px}.input-row{display
 .qty-field.is-hidden{
   display:none;
 }
+
+button.copy-action{
+  min-height:46px;
+  padding:12px 18px;
+  background:#d7eddd;
+  color:#0c512d;
+  border:1px solid #9ecbaa;
+  font-size:16px;
+  font-weight:950;
+  line-height:1.35;
+}
+button.copy-action:hover{background:#cae6d2}
+button.copy-action:focus-visible{outline:3px solid rgba(20,120,63,.22);outline-offset:2px}

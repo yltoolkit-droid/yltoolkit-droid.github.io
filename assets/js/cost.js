@@ -56,10 +56,46 @@ function loadSample(){
   $("containerCost").value=600;$("labelCost").value=100;$("packagingCost").value=300;$("miscCost").value=0;$("yieldCount").value=1;$("marginRate").value=40;
   calculateCost();
 }
+function buildCopyText(){
+  const materials=[...document.querySelectorAll("#materialRows tr")].map(tr=>{
+    const name=tr.querySelector(".mat-name").value.trim();
+    const buyQty=tr.querySelector(".buy-qty").value;
+    const unit=tr.querySelector(".unit").value;
+    const buyPrice=tr.querySelector(".buy-price").value;
+    const useQty=tr.querySelector(".use-qty").value;
+    if(!name&&!buyQty&&!buyPrice&&!useQty)return"";
+    return`- ${name||"원료명 미입력"} / 구입 ${buyQty||0}${unit}, ${won(num(buyPrice))} / 사용 ${useQty||0}${unit} / 사용 원가 ${tr.querySelector(".row-cost").textContent}`;
+  }).filter(Boolean);
+  return[
+    "[YL Toolkit 원가 계산 결과]",
+    "",
+    "원료 입력",
+    "",
+    ...(materials.length?materials:["- 입력된 원료 없음"]),
+    "",
+    "부자재 / 판매 기준",
+    "",
+    `- 용기값: ${won(num($("containerCost").value))}`,
+    `- 라벨값: ${won(num($("labelCost").value))}`,
+    `- 포장비: ${won(num($("packagingCost").value))}`,
+    `- 기타비용: ${won(num($("miscCost").value))}`,
+    `- 완성 수량: ${Math.max(num($("yieldCount").value),1)}개`,
+    `- 목표 마진율: ${num($("marginRate").value)}%`,
+    "",
+    "계산 결과",
+    "",
+    `- 재료 원가: ${$("materialTotal").textContent}`,
+    `- 총 원가: ${$("batchTotal").textContent}`,
+    `- 개당 원가: ${$("unitCost").textContent}`,
+    `- 권장 판매가: ${$("sellingPrice").textContent}`,
+    `- 개당 예상 이익: ${$("profit").textContent}`
+  ].join("\n");
+}
 document.addEventListener("DOMContentLoaded",()=>{
   $("addRowBtn").addEventListener("click",()=>addRow());
   $("clearBtn").addEventListener("click",clearRows);
   $("sampleBtn").addEventListener("click",loadSample);
+  $("costCopyBtn").addEventListener("click",async()=>{const text=buildCopyText();try{await navigator.clipboard.writeText(text);alert("계산 결과를 복사했어요.")}catch(err){alert(text)}});
   ["containerCost","labelCost","packagingCost","miscCost","yieldCount","marginRate"].forEach(id=>$(id).addEventListener("input",calculateCost));
   addRow();
   calculateCost();

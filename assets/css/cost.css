@@ -14,5 +14,8 @@
 .result-box small{display:block;color:var(--muted);font-weight:900;margin-bottom:6px}
 .result-box b{color:var(--accent-dark);font-size:22px}
 .delete-row{border:0;background:#f7f1e8;color:#8a5c2c;border-radius:10px;padding:8px 10px;font-weight:900;cursor:pointer}
+button.copy-action{width:100%;min-height:46px;margin-top:14px;padding:12px 18px;background:#d7eddd;color:#0c512d;border:1px solid #9ecbaa;font-size:16px;font-weight:950;line-height:1.35}
+button.copy-action:hover{background:#cae6d2}
+button.copy-action:focus-visible{outline:3px solid rgba(20,120,63,.22);outline-offset:2px}
 @media(max-width:760px){.cost-extra{grid-template-columns:1fr 1fr}.result-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.cost-extra{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr}}
