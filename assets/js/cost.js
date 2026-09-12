@@ -92,10 +92,17 @@ function buildCopyText(){
   ].join("\n");
 }
 document.addEventListener("DOMContentLoaded",()=>{
+  const resultPanel=$("costCopyBtn").closest(".calc-result");
+  resultPanel.classList.add("print-result");
+  resultPanel.insertAdjacentHTML("afterbegin",'<div class="print-heading"><b>YL Toolkit</b><h1>화장품 원가·판매가 계산기</h1></div>');
+  $("costCopyBtn").insertAdjacentHTML("beforebegin",'<pre class="print-text" id="costPrintText"></pre>');
+  const costActions=document.createElement("div");costActions.className="result-actions print-actions";$("costCopyBtn").before(costActions);costActions.append($("costCopyBtn"));
+  costActions.insertAdjacentHTML("beforeend",'<button class="secondary copy-action" id="costPrintBtn" type="button">인쇄 · PDF 저장</button>');
   $("addRowBtn").addEventListener("click",()=>addRow());
   $("clearBtn").addEventListener("click",clearRows);
   $("sampleBtn").addEventListener("click",loadSample);
   $("costCopyBtn").addEventListener("click",async()=>{const text=buildCopyText();try{await navigator.clipboard.writeText(text);alert("계산 결과를 복사했어요.")}catch(err){alert(text)}});
+  $("costPrintBtn").addEventListener("click",()=>{$("costPrintText").textContent=buildCopyText();window.print()});
   ["containerCost","labelCost","packagingCost","miscCost","yieldCount","marginRate"].forEach(id=>$(id).addEventListener("input",calculateCost));
   addRow();
   calculateCost();

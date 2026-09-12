@@ -54,3 +54,6 @@ button.copy-action:hover{background:#cae6d2}
 button.copy-action:focus-visible{outline:3px solid rgba(20,120,63,.22);outline-offset:2px}
 .combo-actions{padding:0 14px 14px}
 button.combo-copy{width:100%}
+.print-heading,.combo-print-total{display:none}.result-actions{margin-top:12px}.result-actions button{width:100%}
+@page{size:A4 portrait;margin:15mm}
+@media print{body{background:#fff!important;color:#111!important}body *{visibility:hidden}.print-result,.print-result *{visibility:visible}.print-result{position:absolute;inset:0 auto auto 0;width:100%;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important}.print-heading{display:block;margin-bottom:18px}.print-heading b{color:#365f3b;font-size:15px}.print-heading h1{margin:5px 0 8px;font-size:26px}.print-heading p{margin:0}.print-actions,.combo-actions{display:none!important}.combo-print-total{display:block;padding:10px;font-weight:800}.combo{break-inside:avoid;box-shadow:none}.combo-head,th{background:#f2f2f2!important;color:#111!important}}

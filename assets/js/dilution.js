@@ -44,7 +44,22 @@ function calculateDilution(){
 function setVolume(v){ $("totalVolume").value = v; calculateDilution(); }
 function setPercent(v){ $("dilutionPercent").value = v; calculateDilution(); }
 
+function buildDilutionCopyText(){
+  const mode = $("roundMode").options[$("roundMode").selectedIndex].text;
+  return [
+    "[YL Toolkit 에센셜오일 희석 계산 결과]", "",
+    `전체 용량: ${$("totalVolume").value}ml`,
+    `희석률: ${$("dilutionPercent").value}%`,
+    `1ml 기준: ${$("dropsPerMl").value}방울`,
+    `방울 수 처리: ${mode}`, "", $("resultBox").innerText.trim()
+  ].join("\n");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  const resultPanel = $("resultBox").closest(".calc-result");
+  resultPanel.classList.add("print-result");
+  resultPanel.insertAdjacentHTML("afterbegin",'<div class="print-heading"><b>YL Toolkit</b><h1>에센셜오일 희석 계산기</h1></div>');
+  $("resultBox").insertAdjacentHTML("afterend",'<pre class="print-text" id="dilutionPrintText"></pre><div class="result-actions print-actions"><button class="secondary copy-action" id="dilutionCopyBtn" type="button">계산 결과 복사하기</button><button class="secondary copy-action" id="dilutionPrintBtn" type="button">인쇄 · PDF 저장</button></div>');
   $("calcDilutionBtn").addEventListener("click", calculateDilution);
   ["totalVolume","dilutionPercent","dropsPerMl","roundMode"].forEach(id => {
     $(id).addEventListener("input", calculateDilution);
@@ -52,5 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   document.querySelectorAll("[data-volume]").forEach(btn => btn.addEventListener("click", () => setVolume(btn.dataset.volume)));
   document.querySelectorAll("[data-percent]").forEach(btn => btn.addEventListener("click", () => setPercent(btn.dataset.percent)));
+  $("dilutionCopyBtn").addEventListener("click", async () => { const text=buildDilutionCopyText(); try{await navigator.clipboard.writeText(text);alert("계산 결과를 복사했어요.")}catch(err){alert(text)} });
+  $("dilutionPrintBtn").addEventListener("click", () => { $("dilutionPrintText").textContent=buildDilutionCopyText(); window.print(); });
   calculateDilution();
 });

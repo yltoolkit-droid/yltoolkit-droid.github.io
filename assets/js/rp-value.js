@@ -71,12 +71,16 @@
     const rows=getCompareRows();
     comparePanel.hidden=!rows.length;
     compareCount.textContent=rows.length;
-    compareList.innerHTML=rows.map(p=>`<div class="compare-row"><div class="compare-product"><span>${escapeHtml(p.name)}</span><small>${pv(p.rp)}</small></div><strong>${won(p.value)}</strong><span>${grade(p).label}</span></div>`).join('');
+    compareList.innerHTML=rows.map(p=>`<div class="compare-row"><div class="compare-product"><span>${escapeHtml(p.name)}</span><small>${pv(p.rp)}</small><small class="compare-print-detail">가격 ${won(p.price)} · 전체 ${p.rank}위 / ${total}개</small></div><strong>${won(p.value)}</strong><span>${grade(p).label}</span></div>`).join('');
   }
   function buildCompareCopyText(){const rows=getCompareRows();return'[YL Toolkit 포인트 구매 효율 비교]\n\n선택 제품\n\n'+rows.map((p,i)=>`${i+1}. ${p.name}\n   PV: ${pv(p.rp)}\n   가격: ${won(p.price)}\n   1PV당 제품가치: ${won(p.value)}\n   전체 순위: ${p.rank}위 / ${total}개\n   효율 안내: ${grade(p).label}`).join('\n\n')}
   function escapeHtml(s){return String(s).replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]))}
   [searchEl,categoryEl,sortEl].forEach(el=>el.addEventListener(el===searchEl?'input':'change',render));
   clearCompare.addEventListener('click',()=>{selected.clear();render();renderCompare()});
   copyCompare.addEventListener('click',async()=>{const text=buildCompareCopyText();try{await navigator.clipboard.writeText(text);alert('비교 결과를 복사했습니다.')}catch(err){alert(text)}});
+  comparePanel.classList.add('print-result');
+  comparePanel.insertAdjacentHTML('afterbegin','<div class="print-heading"><b>YL Toolkit</b><h1>포인트 구매 효율 비교기</h1></div>');
+  copyCompare.parentElement.insertAdjacentHTML('beforeend','<button class="secondary copy-action" id="printCompare" type="button">인쇄 · PDF 저장</button>');
+  document.getElementById('printCompare').addEventListener('click',()=>window.print());
   render();
 })();
