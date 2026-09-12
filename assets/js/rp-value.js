@@ -80,7 +80,6 @@
   copyCompare.addEventListener('click',async()=>{const text=buildCompareCopyText();try{await navigator.clipboard.writeText(text);alert('비교 결과를 복사했습니다.')}catch(err){alert(text)}});
   comparePanel.classList.add('print-result');
   comparePanel.insertAdjacentHTML('afterbegin','<div class="print-heading"><b>YL Toolkit</b><h1>포인트 구매 효율 비교기</h1></div>');
-  copyCompare.parentElement.insertAdjacentHTML('beforeend','<button class="secondary copy-action" id="printCompare" type="button">인쇄 · PDF 저장</button>');
   document.getElementById('printCompare').addEventListener('click',()=>window.print());
   render();
 })();
