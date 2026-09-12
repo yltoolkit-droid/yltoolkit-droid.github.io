@@ -8,6 +8,7 @@
   const compareList=document.getElementById('compareList');
   const compareCount=document.getElementById('compareCount');
   const clearCompare=document.getElementById('clearCompare');
+  const copyCompare=document.getElementById('copyCompare');
   const statCount=document.getElementById('statCount');
   const statMedian=document.getElementById('statMedian');
   const statTop=document.getElementById('statTop');
@@ -63,16 +64,19 @@
         <div class="value-card-foot"><span class="efficiency-badge efficiency-${g.key}">${g.label}</span><label class="compare-check"><input type="checkbox" data-id="${p.id}"${checked}> 비교에 담기</label></div>
       </article>`
     }).join('');
-    listEl.querySelectorAll('input[data-id]').forEach(el=>el.addEventListener('change',()=>{const id=Number(el.dataset.id);el.checked?selected.add(id):selected.delete(id);renderCompare()}));
+    listEl.querySelectorAll('input[data-id]').forEach(el=>el.addEventListener('change',()=>{const id=Number(el.dataset.id);if(el.checked){if(selected.size>=3){el.checked=false;alert('비교 제품은 최대 3개까지 선택할 수 있어요.');return}selected.add(id)}else selected.delete(id);renderCompare()}));
   }
+  function getCompareRows(){return source.filter(p=>selected.has(p.id)).sort((a,b)=>b.value-a.value)}
   function renderCompare(){
-    const rows=source.filter(p=>selected.has(p.id)).sort((a,b)=>b.value-a.value);
+    const rows=getCompareRows();
     comparePanel.hidden=!rows.length;
     compareCount.textContent=rows.length;
-    compareList.innerHTML=rows.map(p=>`<div class="compare-row"><span>${escapeHtml(p.name)}</span><strong>${won(p.value)}</strong><span>${grade(p).label}</span></div>`).join('');
+    compareList.innerHTML=rows.map(p=>`<div class="compare-row"><div class="compare-product"><span>${escapeHtml(p.name)}</span><small>${pv(p.rp)}</small></div><strong>${won(p.value)}</strong><span>${grade(p).label}</span></div>`).join('');
   }
+  function buildCompareCopyText(){const rows=getCompareRows();return'[YL Toolkit 포인트 구매 효율 비교]\n\n선택 제품\n\n'+rows.map((p,i)=>`${i+1}. ${p.name}\n   PV: ${pv(p.rp)}\n   가격: ${won(p.price)}\n   1PV당 제품가치: ${won(p.value)}\n   전체 순위: ${p.rank}위 / ${total}개\n   효율 안내: ${grade(p).label}`).join('\n\n')}
   function escapeHtml(s){return String(s).replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]))}
   [searchEl,categoryEl,sortEl].forEach(el=>el.addEventListener(el===searchEl?'input':'change',render));
   clearCompare.addEventListener('click',()=>{selected.clear();render();renderCompare()});
+  copyCompare.addEventListener('click',async()=>{const text=buildCompareCopyText();try{await navigator.clipboard.writeText(text);alert('비교 결과를 복사했습니다.')}catch(err){alert(text)}});
   render();
 })();
