@@ -179,41 +179,6 @@ h2{letter-spacing:-.04em}
   position:relative;
   z-index:2;
 }
-.home-hero-desktop{
-  position:relative;
-  min-height:390px;
-  margin:12px auto 22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:34px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  border-radius:26px;
-  background:url("../images/main-hero-botanical.png?v=1") center/cover no-repeat;
-}
-.home-hero-content{
-  width:min(560px,60%);
-  padding:20px 28px;
-  text-align:center;
-  color:#193525;
-  background:radial-gradient(ellipse at center,rgba(255,255,255,.74) 0%,rgba(255,255,255,.48) 48%,rgba(255,255,255,0) 76%);
-}
-.home-hero-logo{display:block;width:64px;height:64px;margin:0 auto 10px;border-radius:16px;object-fit:contain}
-.home-hero-content p{margin:0 0 17px;font-size:17px;font-weight:650;color:#405849;white-space:nowrap}
-.home-hero-links{display:flex;align-items:center;justify-content:center;gap:12px}
-.home-hero-link{display:inline-flex;align-items:center;justify-content:center;min-width:112px;min-height:40px;padding:8px 18px;border:0;border-radius:999px;font-size:15px;font-weight:850}
-.home-hero-link.pv{background:#dcefdc;color:#285c35}
-.home-hero-link.dilution{background:#ebe4f4;color:#5f4a78}
-.home-hero-link.cost{background:#f3e8d8;color:#6a5032}
-.home-hero-link:hover{background:#fff}
-.home-hero-tagline{position:absolute;right:8%;top:51%;font-family:Georgia,"Times New Roman",serif;font-size:16px;font-style:italic;color:#607763}
-.home-hero-mobile,.home-hero-mobile-action{display:none}
-@media(max-width:767px){
-  .home-hero-desktop{display:none}
-  .home-hero-mobile{display:block}
-  .home-hero-mobile-action{display:flex}
-}
 .btn,button.primary{
   border:0;
   background:linear-gradient(135deg,var(--green),var(--green-deep));
